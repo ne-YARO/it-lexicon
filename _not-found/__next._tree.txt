@@ -1,0 +1,3 @@
+:HL["/it-lexicon/_next/static/chunks/4247c1d086d37d1a.css","style"]
+:HL["/it-lexicon/_next/static/chunks/57c6f51e2dd020fc.css","style"]
+0:{"buildId":"SN2XvxaJkFK7w61PP0-QF","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
