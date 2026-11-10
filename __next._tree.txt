@@ -1,5 +1,5 @@
 :HL["/it-lexicon/_next/static/chunks/4247c1d086d37d1a.css","style"]
-:HL["/it-lexicon/_next/static/chunks/57c6f51e2dd020fc.css","style"]
+:HL["/it-lexicon/_next/static/chunks/e6f9c807b0abc1fe.css","style"]
 :HL["/it-lexicon/_next/static/media/35597f1def34002a-s.p.e2323169.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/it-lexicon/_next/static/media/6ab71d031fe7ae3b-s.p.0e878f5a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/it-lexicon/_next/static/media/80bb744e92754df7-s.p.1eaf03ad.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -10,4 +10,4 @@
 :HL["/it-lexicon/_next/static/media/bec5c09c262b1b7f-s.p.aaa2cd55.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/it-lexicon/_next/static/media/c313dc4eda25f719-s.p.b9499418.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/it-lexicon/_next/static/media/e0056d9a15a9b92a-s.p.1db61fbb.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"buildId":"SN2XvxaJkFK7w61PP0-QF","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"NlSJken0L-vUGtaPviDVc","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
