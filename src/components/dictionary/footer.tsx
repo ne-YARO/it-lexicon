@@ -82,12 +82,20 @@ export function Footer({ onCategorySelect }: FooterProps) {
               Ярощук Егор Евгеньевич 11 РМП
             </p>
           </div>
-          <a
-            href="#top"
-            className="text-xs text-muted-foreground transition hover:text-primary"
-          >
-            Наверх ↑
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href="#sources"
+              className="text-xs text-muted-foreground transition hover:text-primary"
+            >
+              Источники
+            </a>
+            <a
+              href="#top"
+              className="text-xs text-muted-foreground transition hover:text-primary"
+            >
+              Наверх ↑
+            </a>
+          </div>
         </div>
       </div>
     </footer>

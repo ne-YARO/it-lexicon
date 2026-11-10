@@ -40,6 +40,7 @@ import { Alphabet } from "@/components/dictionary/alphabet";
 import { Rubrics } from "@/components/dictionary/rubrics";
 import { TermCard } from "@/components/dictionary/term-card";
 import { TermDialog } from "@/components/dictionary/term-dialog";
+import { Sources } from "@/components/dictionary/sources";
 import { Footer } from "@/components/dictionary/footer";
 import { useFavorites } from "@/hooks/use-favorites";
 import { cn } from "@/lib/utils";
@@ -316,6 +317,9 @@ export default function HomePage() {
             </div>
           )}
         </section>
+
+        {/* Список источников словаря (ГОСТ Р 7.0.100-2018) */}
+        <Sources />
       </main>
 
       <Footer onCategorySelect={setCategory} />
