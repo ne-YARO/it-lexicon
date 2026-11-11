@@ -32,7 +32,7 @@ export function HowTo() {
           Как пользоваться словарём
         </h2>
       </div>
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {STEPS.map((step) => (
           <article
             key={step.title}

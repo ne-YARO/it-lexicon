@@ -40,6 +40,7 @@ import { Alphabet } from "@/components/dictionary/alphabet";
 import { Rubrics } from "@/components/dictionary/rubrics";
 import { TermCard } from "@/components/dictionary/term-card";
 import { TermDialog } from "@/components/dictionary/term-dialog";
+import { Recommend } from "@/components/dictionary/recommend";
 import { Sources } from "@/components/dictionary/sources";
 import { Footer } from "@/components/dictionary/footer";
 import { useFavorites } from "@/hooks/use-favorites";
@@ -54,6 +55,8 @@ export default function HomePage() {
   const [favoritesOnly, setFavoritesOnly] = useState(false);
   const [sortOrder, setSortOrder] = useState<SortOrder>("asc");
   const [openTerm, setOpenTerm] = useState<Term | null>(null);
+  /* Список источников скрыт по умолчанию, раскрывается кнопкой у заголовка */
+  const [sourcesOpen, setSourcesOpen] = useState(false);
   /* Слово дня детерминировано от календарной даты — инициализация лениво, без эффекта */
   const [termOfDay] = useState(() => getTermOfDay());
   const { favorites, toggleFavorite } = useFavorites();
@@ -285,7 +288,7 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="grid gap-4 md:grid-cols-2"
+                className="grid grid-cols-1 gap-4 md:grid-cols-2"
               >
                 {filtered.map((term) => (
                   <TermCard
@@ -318,11 +321,22 @@ export default function HomePage() {
           )}
         </section>
 
-        {/* Список источников словаря (ГОСТ Р 7.0.100-2018) */}
-        <Sources />
+        {/* Рекомендация: приложение одногруппника */}
+        <Recommend />
+
+        {/* Список источников словаря (ГОСТ Р 7.0.100-2018), скрыт по умолчанию */}
+        <Sources open={sourcesOpen} onToggle={setSourcesOpen} />
       </main>
 
-      <Footer onCategorySelect={setCategory} />
+      <Footer
+        onCategorySelect={setCategory}
+        onSourcesClick={() => {
+          setSourcesOpen(true);
+          document
+            .getElementById("sources")
+            ?.scrollIntoView({ behavior: "smooth" });
+        }}
+      />
 
       <TermDialog
         term={openTerm}

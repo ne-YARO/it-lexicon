@@ -79,8 +79,20 @@ export const Hero = forwardRef<HTMLInputElement, HeroProps>(function Hero(
   { query, onQueryChange, onSearchSubmit, resultsCount, totalCount, stats },
   searchRef
 ) {
+  /* Анимация запускается только после гидрации — иначе React ругается на
+     несовпадение текста с серверным HTML (ошибка #418) */
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setMounted(true), 400);
+    return () => clearTimeout(timer);
+  }, []);
+
   /* Подсказка печатается, только пока строка поиска пуста */
-  const suggestion = useTypewriter(SEARCH_SUGGESTIONS, query.length === 0);
+  const suggestion = useTypewriter(
+    SEARCH_SUGGESTIONS,
+    mounted && query.length === 0
+  );
 
   return (
     <section
@@ -139,7 +151,7 @@ export const Hero = forwardRef<HTMLInputElement, HeroProps>(function Hero(
                   </Button>
                 )}
                 {/* Анимированная подсказка печатной машинкой поверх пустого поля */}
-                {query.length === 0 && (
+                {mounted && query.length === 0 && (
                   <span
                     aria-hidden
                     className="pointer-events-none absolute left-12 right-12 top-1/2 flex -translate-y-1/2 items-center overflow-hidden text-base text-muted-foreground"

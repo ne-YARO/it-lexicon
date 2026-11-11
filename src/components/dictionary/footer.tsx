@@ -6,13 +6,15 @@ import type { CategoryId } from "@/data/types";
 
 interface FooterProps {
   onCategorySelect: (category: CategoryId | null) => void;
+  /** Раскрыть список источников и прокрутиться к ним */
+  onSourcesClick: () => void;
 }
 
-export function Footer({ onCategorySelect }: FooterProps) {
+export function Footer({ onCategorySelect, onSourcesClick }: FooterProps) {
   return (
     <footer className="mt-auto border-t bg-secondary/40">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground">
@@ -83,12 +85,13 @@ export function Footer({ onCategorySelect }: FooterProps) {
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <a
-              href="#sources"
+            <button
+              type="button"
+              onClick={onSourcesClick}
               className="text-xs text-muted-foreground transition hover:text-primary"
             >
               Источники
-            </a>
+            </button>
             <a
               href="#top"
               className="text-xs text-muted-foreground transition hover:text-primary"
